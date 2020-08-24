@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Paperless WSO2 REST API Test Suite">
+	<listeners>
+        <listener class-name="ae.gov.sdg.paperless.api.utils.PropertyInjectorListener"/>
+        <listener class-name="ae.gov.sdg.paperless.api.utils.ReportListener"/>
+    </listeners>
+	<test name="DubaiNow">
+		<groups>
+		    <run>
+		      	<include name="prod"/>
+		    </run>
+		</groups>
+		<classes>
+			<class name="ae.gov.sdg.paperless.api.dca.DubaiAirportApiTest" />
+		</classes>
+	</test>
+	<!-- <test name="DubaiHealthAuth">
+		<classes>
+			<class name="ae.gov.sdg.paperless.api.dha.DHATest" />
+		</classes>
+	</test>  -->
+</suite>
+<!-- help https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html -->
